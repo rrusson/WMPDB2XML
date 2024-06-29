@@ -1,15 +1,16 @@
-﻿namespace ClassLibrary1
-{
-    using System.Collections;
-    using System.Collections.Generic;
-    using WMPLib;
+﻿using System.Collections;
+using System.Collections.Generic;
 
+using WMPLib;
+
+namespace MediaInfo
+{
     internal class Library : IEnumerable<Media>
     {
         IEnumerator<Media> IEnumerable<Media>.GetEnumerator()
         {
-            var playlist = new WindowsMediaPlayer().mediaCollection.getAll();
-            var playlistCount = playlist.count;
+			IWMPPlaylist playlist = new WindowsMediaPlayer().mediaCollection.getAll();
+			int playlistCount = playlist.count;
 
             for (int mediaNumber = 0; mediaNumber < playlistCount; mediaNumber++)
             {

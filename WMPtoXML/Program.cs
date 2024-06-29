@@ -1,9 +1,9 @@
-﻿namespace ConsoleApp1
-{
-    using System.Threading.Tasks;
-    using ClassLibrary1;
+﻿using System.Threading.Tasks;
+using MediaInfo;
 
-    class Program
+namespace ConsoleApp1
+{
+    public static class Program
     {
         static async Task Main(string[] args)
         {
